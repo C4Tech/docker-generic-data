@@ -1,4 +1,7 @@
 FROM debian:jessie
 
 RUN mkdir /app
-VOLUME /app
+RUN mkdir /data
+RUN mkdir /var/lib/mysql
+
+VOLUME ["/app", "/data", "/var/lib/mysql"]
